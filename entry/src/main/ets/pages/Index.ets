@@ -1,7 +1,6 @@
-
-import { Word } from '../common/Word'
-import { wordDictionary } from '../common/word-dictionary'
-import { saveWordList, getWordList } from '../common/Sputils'
+import { Word } from 'common_har/src/main/ets/components/common/Word'
+import { wordDictionary } from 'common_har/src/main/ets/components/common/word-dictionary'
+import { saveWordList, getWordList } from 'common_har/src/main/ets/components/common/Sputils'
 
 // 背诵模式枚举
 enum ReciteMode {

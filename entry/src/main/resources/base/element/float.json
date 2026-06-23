@@ -1,8 +1,88 @@
 {
   "float": [
     {
-      "name": "page_text_font_size",
-      "value": "50fp"
+      "name": "word_font_size",
+      "value": "30fp"
+    },
+    {
+      "name": "answer_font",
+      "value": "22fp"
+    },
+    {
+      "name": "title_font",
+      "value": "24fp"
+    },
+    {
+      "name": "tip_font",
+      "value": "20fp"
+    },
+    {
+      "name": "btn_small_font",
+      "value": "12fp"
+    },
+    {
+      "name": "page_padding",
+      "value": "25vp"
+    },
+    {
+      "name": "page_top_margin",
+      "value": "30vp"
+    },
+    {
+      "name": "margin_normal",
+      "value": "15vp"
+    },
+    {
+      "name": "margin_large",
+      "value": "20vp"
+    },
+    {
+      "name": "margin_huge",
+      "value": "30vp"
+    },
+    {
+      "name": "row_space",
+      "value": "10vp"
+    },
+    {
+      "name": "row_space_big",
+      "value": "20vp"
+    },
+    {
+      "name": "search_height",
+      "value": "40vp"
+    },
+    {
+      "name": "btn_height",
+      "value": "45vp"
+    },
+    {
+      "name": "btn_width_small",
+      "value": "70vp"
+    },
+    {
+      "name": "btn_width_normal",
+      "value": "110vp"
+    },
+    {
+      "name": "btn_radius_small",
+      "value": "20vp"
+    },
+    {
+      "name": "card_radius",
+      "value": "8vp"
+    },
+    {
+      "name": "card_radius_big",
+      "value": "16vp"
+    },
+    {
+      "name": "shadow_radius",
+      "value": "12vp"
+    },
+    {
+      "name": "shadow_y",
+      "value": "4vp"
     }
   ]
 }

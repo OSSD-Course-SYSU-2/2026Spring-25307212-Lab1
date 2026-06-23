@@ -1,0 +1,16 @@
+{
+  "float": [
+    {
+      "name": "word_font_size",
+      "value": "36fp"
+    },
+    {
+      "name": "page_padding",
+      "value": "40vp"
+    },
+    {
+      "name": "btn_height",
+      "value": "55vp"
+    }
+  ]
+}

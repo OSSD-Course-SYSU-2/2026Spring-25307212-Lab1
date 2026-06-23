@@ -10,9 +10,9 @@ interface WordRecitePage_Params {
     searchText?: string;
     isWrongBook?: boolean;
 }
-import { Word } from "@normalized:N&&&entry/src/main/ets/common/Word&";
-import { wordDictionary } from "@normalized:N&&&entry/src/main/ets/common/word-dictionary&";
-import { saveWordList, getWordList } from "@normalized:N&&&entry/src/main/ets/common/Sputils&";
+import { Word } from "@normalized:N&&&common_har/src/main/ets/components/common/Word&1.0.0";
+import { wordDictionary } from "@normalized:N&&&common_har/src/main/ets/components/common/word-dictionary&1.0.0";
+import { saveWordList, getWordList } from "@normalized:N&&&common_har/src/main/ets/components/common/Sputils&1.0.0";
 // 背诵模式枚举
 enum ReciteMode {
     EN_TO_CN = // 英译汉
@@ -211,7 +211,7 @@ class WordRecitePage extends ViewPU {
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
-            Column.debugLine("entry/src/main/ets/pages/Index.ets(102:5)", "entry");
+            Column.debugLine("entry/src/main/ets/pages/Index.ets(101:5)", "entry");
             Column.width('100%');
             Column.height('100%');
             Column.backgroundColor('#F5F7FA');
@@ -220,7 +220,7 @@ class WordRecitePage extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             // 顶部栏：标题+模式切换+错词本切换
             Row.create({ space: 10 });
-            Row.debugLine("entry/src/main/ets/pages/Index.ets(104:7)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/Index.ets(103:7)", "entry");
             // 顶部栏：标题+模式切换+错词本切换
             Row.width('90%');
             // 顶部栏：标题+模式切换+错词本切换
@@ -228,7 +228,7 @@ class WordRecitePage extends ViewPU {
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create("单词背诵小助手");
-            Text.debugLine("entry/src/main/ets/pages/Index.ets(105:9)", "entry");
+            Text.debugLine("entry/src/main/ets/pages/Index.ets(104:9)", "entry");
             Text.fontSize(24);
             Text.fontWeight(FontWeight.Bold);
             Text.fontColor('#3366CC');
@@ -236,12 +236,12 @@ class WordRecitePage extends ViewPU {
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Blank.create();
-            Blank.debugLine("entry/src/main/ets/pages/Index.ets(109:9)", "entry");
+            Blank.debugLine("entry/src/main/ets/pages/Index.ets(108:9)", "entry");
         }, Blank);
         Blank.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Button.createWithLabel(this.currentMode === ReciteMode.EN_TO_CN ? "英译汉" : "汉译英");
-            Button.debugLine("entry/src/main/ets/pages/Index.ets(110:9)", "entry");
+            Button.debugLine("entry/src/main/ets/pages/Index.ets(109:9)", "entry");
             Button.fontSize(12);
             Button.backgroundColor('#4CAF50');
             Button.fontColor(Color.White);
@@ -252,7 +252,7 @@ class WordRecitePage extends ViewPU {
         Button.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Button.createWithLabel(this.isWrongBook ? "全部单词" : "错词本");
-            Button.debugLine("entry/src/main/ets/pages/Index.ets(117:9)", "entry");
+            Button.debugLine("entry/src/main/ets/pages/Index.ets(116:9)", "entry");
             Button.fontSize(12);
             Button.backgroundColor(this.isWrongBook ? '#FF5722' : '#607D8B');
             Button.fontColor(Color.White);
@@ -266,7 +266,7 @@ class WordRecitePage extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             // 搜索框
             Search.create({ placeholder: "输入英文/中文搜索", value: this.searchText });
-            Search.debugLine("entry/src/main/ets/pages/Index.ets(129:7)", "entry");
+            Search.debugLine("entry/src/main/ets/pages/Index.ets(128:7)", "entry");
             // 搜索框
             Search.width('90%');
             // 搜索框
@@ -289,7 +289,7 @@ class WordRecitePage extends ViewPU {
                 this.ifElseBranchUpdateFunction(0, () => {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Stack.create();
-                        Stack.debugLine("entry/src/main/ets/pages/Index.ets(139:9)", "entry");
+                        Stack.debugLine("entry/src/main/ets/pages/Index.ets(138:9)", "entry");
                         Stack.width('90%');
                         Stack.backgroundColor(Color.White);
                         Stack.borderRadius(16);
@@ -298,7 +298,7 @@ class WordRecitePage extends ViewPU {
                     }, Stack);
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Column.create();
-                        Column.debugLine("entry/src/main/ets/pages/Index.ets(140:11)", "entry");
+                        Column.debugLine("entry/src/main/ets/pages/Index.ets(139:11)", "entry");
                         Column.width('100%');
                         Column.padding(40);
                     }, Column);
@@ -306,7 +306,7 @@ class WordRecitePage extends ViewPU {
                         Text.create(this.currentMode === ReciteMode.EN_TO_CN
                             ? this.filteredWordList[this.currentIndex].english
                             : this.filteredWordList[this.currentIndex].chinese);
-                        Text.debugLine("entry/src/main/ets/pages/Index.ets(141:13)", "entry");
+                        Text.debugLine("entry/src/main/ets/pages/Index.ets(140:13)", "entry");
                         Text.fontSize(36);
                         Text.fontWeight(FontWeight.Bold);
                         Text.margin({ bottom: 20 });
@@ -321,7 +321,7 @@ class WordRecitePage extends ViewPU {
                                     Text.create(this.currentMode === ReciteMode.EN_TO_CN
                                         ? this.filteredWordList[this.currentIndex].chinese
                                         : this.filteredWordList[this.currentIndex].english);
-                                    Text.debugLine("entry/src/main/ets/pages/Index.ets(150:15)", "entry");
+                                    Text.debugLine("entry/src/main/ets/pages/Index.ets(149:15)", "entry");
                                     Text.fontSize(22);
                                     Text.fontColor(Color.Grey);
                                     Text.textAlign(TextAlign.Center);
@@ -344,7 +344,7 @@ class WordRecitePage extends ViewPU {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         // 无数据提示
                         Text.create(this.isWrongBook ? "暂无标记错词" : "无匹配单词");
-                        Text.debugLine("entry/src/main/ets/pages/Index.ets(168:9)", "entry");
+                        Text.debugLine("entry/src/main/ets/pages/Index.ets(167:9)", "entry");
                         // 无数据提示
                         Text.fontSize(20);
                         // 无数据提示
@@ -361,11 +361,11 @@ class WordRecitePage extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             // 功能按钮区
             Row.create({ space: 20 });
-            Row.debugLine("entry/src/main/ets/pages/Index.ets(175:7)", "entry");
+            Row.debugLine("entry/src/main/ets/pages/Index.ets(174:7)", "entry");
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Button.createWithLabel("查看答案");
-            Button.debugLine("entry/src/main/ets/pages/Index.ets(176:9)", "entry");
+            Button.debugLine("entry/src/main/ets/pages/Index.ets(175:9)", "entry");
             Button.width(110);
             Button.height(45);
             Button.backgroundColor('#2196F3');
@@ -378,7 +378,7 @@ class WordRecitePage extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Button.createWithLabel(this.filteredWordList.length > 0 && this.filteredWordList[this.currentIndex].isWrong
                 ? "取消错词" : "标记错词");
-            Button.debugLine("entry/src/main/ets/pages/Index.ets(185:9)", "entry");
+            Button.debugLine("entry/src/main/ets/pages/Index.ets(184:9)", "entry");
             Button.width(110);
             Button.height(45);
             Button.backgroundColor(this.filteredWordList.length > 0 && this.filteredWordList[this.currentIndex].isWrong
@@ -391,7 +391,7 @@ class WordRecitePage extends ViewPU {
         Button.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Button.createWithLabel("下一个单词");
-            Button.debugLine("entry/src/main/ets/pages/Index.ets(196:9)", "entry");
+            Button.debugLine("entry/src/main/ets/pages/Index.ets(195:9)", "entry");
             Button.width(110);
             Button.height(45);
             Button.backgroundColor('#4CAF50');

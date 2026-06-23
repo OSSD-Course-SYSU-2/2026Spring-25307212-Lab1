@@ -37,6 +37,30 @@
           ]
         }
       ]
+    },
+    {
+      "name": "entry_tablet",
+      "srcPath": "./entry_tablet",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "common_har",
+      "srcPath": "./common_har",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }

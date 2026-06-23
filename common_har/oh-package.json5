@@ -1,0 +1,8 @@
+{
+  "name": "common_har",
+  "version": "1.0.0",
+  "description": "公共HAR封装模块",
+  "main": "",
+  "author": "",
+  "license": "Apache License 2.0"
+}

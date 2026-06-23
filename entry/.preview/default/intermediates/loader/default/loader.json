@@ -1,6 +1,8 @@
 {
   "modulePathMap": {
-    "entry": "D:\\Users\\kuhuhu\\DevEcoStudioProjects\\English\\entry"
+    "entry": "D:\\Users\\kuhuhu\\DevEcoStudioProjects\\English\\entry",
+    "entry_tablet": "D:\\Users\\kuhuhu\\DevEcoStudioProjects\\English\\entry_tablet",
+    "common_har": "D:\\Users\\kuhuhu\\DevEcoStudioProjects\\English\\common_har"
   },
   "compileMode": "esmodule",
   "projectRootPath": "D:\\Users\\kuhuhu\\DevEcoStudioProjects\\English",
